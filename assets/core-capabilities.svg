@@ -1,0 +1,235 @@
+<svg
+  width="1200"
+  height="470"
+  viewBox="0 0 1200 470"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+
+  <!-- Background -->
+  <rect
+    x="1"
+    y="1"
+    width="1198"
+    height="468"
+    rx="18"
+    fill="#0B0F14"
+    stroke="#2B3038"
+    stroke-width="2"
+  />
+
+  <!-- Accent -->
+  <rect
+    x="0"
+    y="0"
+    width="1200"
+    height="5"
+    rx="2.5"
+    fill="#F7C948"
+  />
+
+  <!-- Column separators -->
+  <line
+    x1="400"
+    y1="42"
+    x2="400"
+    y2="428"
+    stroke="#2B3038"
+    stroke-width="2"
+  />
+
+  <line
+    x1="800"
+    y1="42"
+    x2="800"
+    y2="428"
+    stroke="#2B3038"
+    stroke-width="2"
+  />
+
+  <!-- ================= PRODUCT ================= -->
+
+  <rect
+    x="42"
+    y="42"
+    width="46"
+    height="28"
+    rx="14"
+    fill="#F7C948"
+  />
+
+  <text
+    x="65"
+    y="61"
+    text-anchor="middle"
+    fill="#0B0F14"
+    font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"
+    font-size="14"
+    font-weight="700"
+  >
+    01
+  </text>
+
+  <text
+    x="42"
+    y="112"
+    fill="#F7C948"
+    font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"
+    font-size="27"
+    font-weight="700"
+  >
+    Product
+  </text>
+
+  <text
+    x="42"
+    y="157"
+    fill="#F5F7FA"
+    font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"
+    font-size="19"
+    font-weight="700"
+  >
+    Product Strategy
+  </text>
+
+  <text
+    x="42"
+    y="194"
+    fill="#9CA3AF"
+    font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"
+    font-size="18"
+  >
+    <tspan x="42" dy="0">UX Strategy</tspan>
+    <tspan x="42" dy="34">Product Discovery</tspan>
+    <tspan x="42" dy="34">Information Architecture</tspan>
+    <tspan x="42" dy="34">Journey Mapping</tspan>
+    <tspan x="42" dy="34">User Research</tspan>
+    <tspan x="42" dy="34">Usability Testing</tspan>
+    <tspan x="42" dy="34">Conversion Optimization</tspan>
+  </text>
+
+
+  <!-- ================= DESIGN ================= -->
+
+  <rect
+    x="442"
+    y="42"
+    width="46"
+    height="28"
+    rx="14"
+    fill="#F7C948"
+  />
+
+  <text
+    x="465"
+    y="61"
+    text-anchor="middle"
+    fill="#0B0F14"
+    font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"
+    font-size="14"
+    font-weight="700"
+  >
+    02
+  </text>
+
+  <text
+    x="442"
+    y="112"
+    fill="#F7C948"
+    font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"
+    font-size="27"
+    font-weight="700"
+  >
+    Design
+  </text>
+
+  <text
+    x="442"
+    y="157"
+    fill="#F5F7FA"
+    font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"
+    font-size="19"
+    font-weight="700"
+  >
+    UI / UX / CX
+  </text>
+
+  <text
+    x="442"
+    y="194"
+    fill="#9CA3AF"
+    font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"
+    font-size="18"
+  >
+    <tspan x="442" dy="0">Interaction Design</tspan>
+    <tspan x="442" dy="34">Design Systems</tspan>
+    <tspan x="442" dy="34">Visual Systems</tspan>
+    <tspan x="442" dy="34">Prototyping</tspan>
+    <tspan x="442" dy="34">Accessibility</tspan>
+    <tspan x="442" dy="34">Responsive Design</tspan>
+    <tspan x="442" dy="34">Art Direction</tspan>
+  </text>
+
+
+  <!-- ================= ENGINEERING ================= -->
+
+  <rect
+    x="842"
+    y="42"
+    width="46"
+    height="28"
+    rx="14"
+    fill="#F7C948"
+  />
+
+  <text
+    x="865"
+    y="61"
+    text-anchor="middle"
+    fill="#0B0F14"
+    font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"
+    font-size="14"
+    font-weight="700"
+  >
+    03
+  </text>
+
+  <text
+    x="842"
+    y="112"
+    fill="#F7C948"
+    font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"
+    font-size="27"
+    font-weight="700"
+  >
+    Engineering
+  </text>
+
+  <text
+    x="842"
+    y="157"
+    fill="#F5F7FA"
+    font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"
+    font-size="19"
+    font-weight="700"
+  >
+    Design Engineering
+  </text>
+
+  <text
+    x="842"
+    y="194"
+    fill="#9CA3AF"
+    font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif"
+    font-size="18"
+  >
+    <tspan x="842" dy="0">Front-End Development</tspan>
+    <tspan x="842" dy="34">React / Next.js</tspan>
+    <tspan x="842" dy="34">HTML / CSS / JavaScript</tspan>
+    <tspan x="842" dy="34">Performance</tspan>
+    <tspan x="842" dy="34">Technical SEO</tspan>
+    <tspan x="842" dy="34">AI Workflows</tspan>
+    <tspan x="842" dy="34">Design-to-Code</tspan>
+  </text>
+
+</svg>
