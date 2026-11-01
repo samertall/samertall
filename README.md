@@ -175,7 +175,7 @@ Professional Impact
 <p align="center"><a href="https://github.com/samertall">
   <img
     width="49%"
-    src="https://github-readme-stats.vercel.app/api?username=samertall&amp;show_icons=true&amp;hide_rank=true&amp;hide_border=false&amp;border_color=2B3038&amp;bg_color=0B0F14&amp;title_color=F7C948&amp;icon_color=F7C948&amp;text_color=F5F7FA&amp;include_all_commits=true&amp;show=reviews,prs_merged,prs_merged_percentage"
+    src="https://github-stats-extended.vercel.app/api?username=samertall&amp;show_icons=true&amp;hide_rank=true&amp;hide_border=false&amp;border_color=2B3038&amp;bg_color=0B0F14&amp;title_color=F7C948&amp;icon_color=F7C948&amp;text_color=F5F7FA&amp;include_all_commits=true&amp;show=reviews,prs_merged,prs_merged_percentage"
     alt="Samer Tallauze GitHub Statistics"
   />
 </a><a href="https://github.com/samertall">
@@ -195,7 +195,7 @@ Professional Impact
 <p align="center"><a href="https://github.com/samertall">
   <img
     width="52%"
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=samertall&amp;layout=compact&amp;hide_border=false&amp;border_color=2B3038&amp;bg_color=0B0F14&amp;title_color=F7C948&amp;text_color=F5F7FA"
+    src="https://github-stats-extended.vercel.app/api/top-langs/?username=samertall&amp;layout=compact&amp;hide_border=false&amp;border_color=2B3038&amp;bg_color=0B0F14&amp;title_color=F7C948&amp;text_color=F5F7FA"
     alt="Samer Tallauze Most Used GitHub Languages"
   />
 </a></p><p align="center"><sub>
