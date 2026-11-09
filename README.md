@@ -242,3 +242,4 @@ engineering, and growth operate as one connected system.</strong></p>
 <a href="https://samertall.com/">
 <strong>samertall.com</strong>
 </a></div>
+[![Starred on StarSwap](https://www.fenriryt.me/badge/samertall)](https://www.fenriryt.me/u/samertall?ref=badge)
