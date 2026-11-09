@@ -241,5 +241,14 @@ engineering, and growth operate as one connected system.</strong></p>
 
 <a href="https://samertall.com/">
 <strong>samertall.com</strong>
-</a></div>
-[![Starred on StarSwap](https://www.fenriryt.me/badge/samertall)](https://www.fenriryt.me/u/samertall?ref=badge)
+</a>
+
+<p align="center">
+  <a href="https://www.fenriryt.me/u/samertall?ref=badge">
+    <img
+      src="https://www.fenriryt.me/badge/samertall"
+      alt="StarSwap - 67 stars received"
+      height="28"
+    />
+  </a>
+</p></div>
