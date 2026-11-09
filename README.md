@@ -242,7 +242,7 @@ engineering, and growth operate as one connected system.</strong></p>
 <a href="https://samertall.com/">
 <strong>samertall.com</strong>
 </a>
-
+<br><br>
 <p align="center">
   <a href="https://www.fenriryt.me/u/samertall?ref=badge">
     <img
