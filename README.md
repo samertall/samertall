@@ -360,14 +360,4 @@ Let's Build Something Meaningful
 
   <p><a href="https://samertall.com/"><strong>samertall.com</strong></a></p>
 
-  <p>
-    <a href="https://www.fenriryt.me/u/samertall?ref=badge">
-      <img
-        src="https://www.fenriryt.me/badge/samertall"
-        alt="StarSwap - 67 stars received"
-        height="28"
-      />
-    </a>
-  </p>
-
 </div>
