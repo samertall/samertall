@@ -1,0 +1,260 @@
+@import "tailwindcss";
+
+:root {
+  --background: #07090c;
+  --foreground: #f4f6f8;
+  --surface: #10141b;
+  --surface-2: #171d27;
+  --line: #2c3442;
+  --muted: #9aa3b2;
+  --heat: #f7c948;
+  --ember: #ff7a3c;
+  --cool: #8ee0c8;
+  --storm: #fff1b8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-muted: var(--muted);
+  --color-heat: var(--heat);
+  --color-ember: var(--ember);
+  --color-cool: var(--cool);
+  --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-fraunces);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(900px 420px at 8% -10%, rgba(247, 201, 72, 0.16), transparent 55%),
+    radial-gradient(700px 380px at 100% 0%, rgba(255, 122, 60, 0.1), transparent 46%),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+::selection {
+  background: var(--heat);
+  color: #14110a;
+}
+
+a {
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.quote {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-weight: 460;
+  letter-spacing: -0.035em;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 50;
+  border-radius: 999px;
+  background: var(--heat);
+  color: #14110a;
+  padding: 0.5rem 0.9rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.btn {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  border-radius: 999px;
+  padding: 0 1rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  transition: transform 160ms ease, background 160ms ease, color 160ms ease;
+}
+
+.btn:disabled {
+  opacity: 0.65;
+}
+
+.btn:focus-visible,
+.chip:focus-visible,
+.field:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--heat);
+  outline-offset: 3px;
+}
+
+.btn-heat {
+  background: var(--heat);
+  color: #16130a;
+}
+
+.btn-heat:hover {
+  background: #ffd86a;
+}
+
+.btn-ghost {
+  border: 1px solid var(--line);
+  color: var(--foreground);
+  background: transparent;
+}
+
+.btn-ghost:hover {
+  border-color: #526078;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.chip:hover {
+  color: var(--foreground);
+  border-color: #526078;
+}
+
+.scroller {
+  display: flex;
+  gap: 0.45rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.stage,
+.panel,
+.row-card {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(23, 29, 39, 0.92), rgba(16, 20, 27, 0.92));
+  border-radius: 1.6rem;
+}
+
+.stage,
+.panel {
+  padding: 1.4rem;
+}
+
+@media (min-width: 640px) {
+  .stage,
+  .panel {
+    padding: 2rem;
+  }
+}
+
+.row-card {
+  padding: 1rem 1.05rem;
+}
+
+.field {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid var(--line);
+  background: #0c1016;
+  color: var(--foreground);
+  padding: 0.85rem 1rem;
+  font: inherit;
+}
+
+.field::placeholder {
+  color: #6f7886;
+}
+
+.heat {
+  height: 0.35rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #222a36;
+}
+
+.heat > span {
+  display: block;
+  height: 100%;
+  background: var(--heat);
+}
+
+.heat > span[data-stage="ember"] {
+  background: var(--ember);
+}
+
+.heat > span[data-stage="wave"] {
+  background: var(--cool);
+}
+
+.heat > span[data-stage="storm"] {
+  background: linear-gradient(90deg, var(--ember), var(--storm));
+}
+
+.stage-label {
+  color: var(--heat);
+}
+
+.stage-ember {
+  color: var(--ember);
+}
+
+.stage-wave {
+  color: var(--cool);
+}
+
+.stage-storm {
+  color: var(--storm);
+}
+
+.live-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--heat);
+  box-shadow: 0 0 0 0 rgba(247, 201, 72, 0.7);
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  70% {
+    box-shadow: 0 0 0 8px rgba(247, 201, 72, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-dot {
+    animation: none;
+  }
+
+  .btn {
+    transition: none;
+  }
+}
