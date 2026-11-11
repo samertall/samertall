@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import { connection } from "next/server";
 import { ReplyForm } from "@/components/composer";
 import { RippleStage } from "@/components/board-view";
+import { DatabaseMissing } from "@/components/shell";
 import { Avatar } from "@/components/avatar";
 import { readDb } from "@/db";
 import { getRipple, getRippleCopy } from "@/lib/board";
@@ -15,7 +16,7 @@ type Params = { params: Promise<{ id: string }> };
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { id } = await params;
-  const copy = await getRippleCopy(id);
+  const copy = await getRippleCopy(id).catch(() => null);
   if (!copy) return { title: "Missing line" };
   return {
     title: copy.body.slice(0, 72),
@@ -38,7 +39,8 @@ async function RippleLive({ params }: Params) {
     const viewer = await getViewer();
     return getRipple(id, viewer?.id ?? null);
   });
-  if (!result.ok || !result.data) notFound();
+  if (!result.ok) return <DatabaseMissing />;
+  if (!result.data) notFound();
   const detail = result.data;
   return (
     <div className="mx-auto grid max-w-3xl gap-8">

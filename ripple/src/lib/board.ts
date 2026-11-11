@@ -18,6 +18,7 @@ export type RippleCard = {
   createdAt: Date;
   author: Author;
   passes: number;
+  passesLastHour: number;
   replies: number;
   heat: number;
   stage: Stage;
@@ -75,6 +76,7 @@ export function focusBoard(board: Board, items: RippleCard[]): Board {
     fresh,
     ranked,
     voices: new Set(items.map((item) => item.author.handle)).size,
+    passesThisHour: items.reduce((sum, item) => sum + item.passesLastHour, 0),
   };
 }
 
@@ -132,6 +134,7 @@ export async function loadBoard(viewerId: string | null, now = Date.now()): Prom
       createdAt: row.createdAt,
       author: authorFrom(row.authorId, people),
       passes: tally.passTotal,
+      passesLastHour: tally.passesLastHour,
       replies: replyCount,
       heat,
       stage: stageFor(heat),

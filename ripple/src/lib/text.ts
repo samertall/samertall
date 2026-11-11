@@ -59,5 +59,6 @@ export function avatarHue(seed: string) {
 
 export function safeNext(value: string | null | undefined) {
   if (!value || !value.startsWith("/") || value.startsWith("//")) return "/";
+  if (/[\u0000-\u001F\u007F\\]/.test(value)) return "/";
   return value;
 }

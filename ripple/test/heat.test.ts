@@ -42,4 +42,6 @@ test("next paths stay on this site", () => {
   assert.equal(safeNext("/drop"), "/drop");
   assert.equal(safeNext("https://evil.example"), "/");
   assert.equal(safeNext("//evil.example"), "/");
+  assert.equal(safeNext("/\\evil.example"), "/");
+  assert.equal(safeNext("/drop\n"), "/");
 });

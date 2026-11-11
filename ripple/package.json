@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "tsx --test test/heat.test.ts",
+    "test": "tsx --test test/*.test.ts",
     "db:push": "dotenv -e .env.local -- drizzle-kit push --force",
     "db:seed": "dotenv -e .env.local -- tsx scripts/seed.ts"
   },
