@@ -429,7 +429,7 @@ export function lessonJson(view: LessonView, revealAnswers: boolean) {
     title: view.lesson.title,
     kind: view.lesson.kind,
     minutes: view.lesson.minutes,
-    body: view.lesson.kind === "reading" || revealAnswers ? view.body : view.body,
+    body: view.body,
     done: view.lesson.done,
     previousId: view.previous?.id ?? null,
     nextId: view.next?.id ?? null,
