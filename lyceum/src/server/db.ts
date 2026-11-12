@@ -34,7 +34,7 @@ export function flag(value: unknown) {
 }
 
 const requestStore = cache(async (): Promise<StoreKind> => {
-  if (databaseUrl === "") return "local";
+  if (databaseUrl === "") return process.env.VERCEL ? "preview" : "local";
   if (process.env.VERCEL_ENV === "preview") return "preview";
   try {
     const identity = await getIdentity(await headers());
@@ -60,12 +60,16 @@ async function openPglite(kind: "local" | "preview") {
   return db;
 }
 
-async function applyMigrations(db: PGlite) {
+async function migrationSql() {
   const directory = path.join(process.cwd(), "migrations");
   const files = (await readdir(directory).catch(() => [])).filter((file) => file.endsWith(".sql")).sort();
-  for (const file of files) {
-    await db.exec(await readFile(path.join(directory, file), "utf8"));
-  }
+  const statements: string[] = [];
+  for (const file of files) statements.push(await readFile(path.join(directory, file), "utf8"));
+  return statements;
+}
+
+async function applyMigrations(db: PGlite) {
+  for (const statement of await migrationSql()) await db.exec(statement);
 }
 
 function pglite(kind: "local" | "preview") {
@@ -107,6 +111,7 @@ async function seedStore(kind: StoreKind) {
       await client.query("begin");
       try {
         await client.query("select pg_advisory_xact_lock(7272741)");
+        for (const statement of await migrationSql()) await client.query(statement);
         const count = await client.query("select count(*)::int as n from courses");
         if (num(count.rows[0]?.n) === 0) {
           await insertCurriculum(async <T,>(text: string, params: unknown[] = []) => (await client.query(text, params)).rows as T[]);
